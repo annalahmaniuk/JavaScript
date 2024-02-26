@@ -1,11 +1,3 @@
-function toRadians(degrees) {
-    return degrees * (Math.PI / 180);
-}
-
-function toDegrees(radians) {
-    return radians * (180 / Math.PI);
-}
-
 function validateInput(value, type) {
     const validTypes = ['leg', 'hypotenuse', 'angle'];
     if (value <= 0) return "Value must be greater than zero.";
@@ -14,17 +6,46 @@ function validateInput(value, type) {
     return "valid";
 }
 
-function triangle(value1, type1, value2, type2) {
-    console.log("Usage: triangle(value1, 'type1', value2, 'type2'), where 'type' can be 'leg', 'hypotenuse', or 'angle'.");
+function toRadians(degrees) {
+    return degrees * (Math.PI / 180);
+}
 
+function toDegrees(radians) {
+    return radians * (180 / Math.PI);
+}
+
+function triangle(value1, type1, value2, type2) {
+    // Інструкція
+    console.log("This is the instructions for using the 'triangle' function.");
+    console.log("Initial values:");
+    console.log(" - value1: ", value1, " (the first value provided as input to the 'triangle' function)");
+    console.log(" - type1: ", type1, " (the type of the first value, which can be 'leg', 'hypotenuse', or 'angle')");
+    console.log(" - value2: ", value2, " (the second value provided as input to the 'triangle' function)");
+    console.log(" - type2: ", type2, " (the type of the second value, which can be 'leg', 'hypotenuse', or 'angle')");
+    console.log("Parameters:");
+    console.log(" - value1: the first value (either a length or an angle),");
+    console.log(" - type1: the type of the first value ('leg', 'hypotenuse', or 'angle'),");
+    console.log(" - value2: the second value (either a length or an angle),");
+    console.log(" - type2: the type of the second value ('leg', 'hypotenuse', or 'angle').");
+    console.log("Returns:");
+    console.log(" - 'failed' if the input values are invalid or if the combination of types is invalid,");
+    console.log(" - 'success' if the calculation is successful and the properties of the right triangle are displayed.");
+
+    // Перевірка валідності вхідних даних
     let validationMessage1 = validateInput(value1, type1);
     let validationMessage2 = validateInput(value2, type2);
+
+    // Виведення повідомлення про неправильні вхідні дані, якщо вони неправильні
     if (validationMessage1 !== "valid") {
         console.log(validationMessage1);
         return "failed";
     }
     if (validationMessage2 !== "valid") {
         console.log(validationMessage2);
+        return "failed";
+    }
+    if ((type1 === 'angle' && type2 === 'angle') || (type1 === 'leg' && type2 === 'hypotenuse') || (type1 === 'hypotenuse' && type2 === 'leg')) {
+        console.log("Invalid combination of types. Please read the instructions again.");
         return "failed";
     }
 
@@ -80,10 +101,13 @@ function triangle(value1, type1, value2, type2) {
         }
     }
 
-    console.log(`c (hypotenuse) = ${c.toFixed(2)}, a (leg) = ${a.toFixed(2)}, b (leg) = ${b.toFixed(2)}, alpha (angle) = ${alpha.toFixed(2)}°, beta (angle) = ${beta.toFixed(2)}°`);
+    console.log(`c (hypotenuse) = ${c.toFixed(2)}`);
+    console.log(`a (leg) = ${a.toFixed(2)}`);
+    console.log(`b (leg) = ${b.toFixed(2)}`);
+    console.log(`alpha (angle) = ${alpha.toFixed(2)}°`);
+    console.log(`beta (angle) = ${beta.toFixed(2)}°`);
     return "success";
 }
 
 // Демонстрація використання:
-console.log(triangle(4, "leg", 8, "hypotenuse")); // Приклад коректного використання
-console.log(triangle(30, "angle", 8, "leg")); // Інший приклад
+console.log(triangle(3, "leg", 4, "leg")); // Приклад коректного використання
