@@ -1,5 +1,5 @@
 function validateInput(value, type) {
-    const validTypes = ['leg', 'hypotenuse', 'angle'];
+    const validTypes = ['leg', 'hypotenuse', 'angle', 'adjacent angle', 'opposite angle'];
     if (value <= 0) return "Value must be greater than zero.";
     if (!validTypes.includes(type)) return "Invalid type. Valid types are 'leg', 'hypotenuse', and 'angle'.";
     if (type === 'angle' && (value <= 0 || value >= 90)) return "Angle must be between 0 and 90 degrees.";
@@ -99,6 +99,11 @@ function triangle(value1, type1, value2, type2) {
             console.log("Invalid combination of arguments.");
             return "failed";
         }
+    }
+    if ((type1 === 'angle' && (type2 === 'adjacent angle' || type2 === 'opposite angle')) ||
+        (type2 === 'angle' && (type1 === 'adjacent angle' || type1 === 'opposite angle'))) {
+        console.log("Invalid combination of types involving adjacent or opposite angles. Please read the instructions again.");
+        return "failed";
     }
 
     console.log(`c (hypotenuse) = ${c.toFixed(2)}`);
