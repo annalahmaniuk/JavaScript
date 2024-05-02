@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Гра з квадратом</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="cen">
+    <div id="start-menu" class="menu">
+        <h2>Налаштування гри</h2>
+        <label for="difficulty">Виберіть складність:</label>
+        <select id="difficulty">
+            <option value="">-- Виберіть --</option>
+            <option value="easy">Легка</option>
+            <option value="medium">Середня</option>
+            <option value="hard">Важка</option>
+        </select>
+
+        <br><br>
+
+        <label for="color">Виберіть колір квадрата:</label>
+        <select id="color">
+            <option value="">-- Виберіть --</option>
+            <option value="red">Червоний</option>
+            <option value="blue">Синій</option>
+            option value="green">Зелений</option>
+            <option value="yellow">Жовтий</option>
+            <option value="purple">Фіолетовий</option>
+            <option value="orange">Помаранчевий</option>
+            <option value="pink">Рожевий</option>
+        </select>
+
+        <br><br>
+
+        <button class="button" id="start-game">Старт</button>
+        <p id="error-message" class="hidden error">Будь ласка, виберіть складність і колір.</p>
+    </div>
+
+ 
+    <div id="game-area" class="hidden">
+        <div id="score-board" class="hidden">
+            <p>Очки: <span id="score">0</span></п>
+            <p>Залишок часу: <span id="timer">0</span> сек.</п>
+        </div>
+  
+        <div id="square" class="square"></div> 
+    </div>
+
+   
+   
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
