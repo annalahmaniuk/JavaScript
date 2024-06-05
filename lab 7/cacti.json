@@ -1,0 +1,5 @@
+[
+    {"name": "Golden Barrel Cactus", "description": "A round cactus that is easy to grow and very popular.", "price": 150},
+    {"name": "Prickly Pear Cactus", "description": "A cactus known for its flat, round pads and edible fruit.", "price": 200},
+    {"name": "Christmas Cactus", "description": "A cactus that blooms in winter with beautiful red flowers.", "price": 180}
+]

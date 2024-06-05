@@ -1,0 +1,5 @@
+[
+    {"name": "Rose", "description": "A classic flower known for its beauty and fragrance.", "price": 100},
+    {"name": "Tulip", "description": "A spring-blooming flower with colorful petals.", "price": 80},
+    {"name": "Sunflower", "description": "A tall flower known for its large, sunny blooms.", "price": 90}
+]

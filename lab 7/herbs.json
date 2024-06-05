@@ -1,0 +1,5 @@
+[
+    {"name": "Basil", "description": "A fragrant herb commonly used in Italian cuisine.", "price": 50},
+    {"name": "Mint", "description": "A refreshing herb often used in drinks and desserts.", "price": 40},
+    {"name": "Rosemary", "description": "A woody herb with needle-like leaves used in cooking.", "price": 60}
+]

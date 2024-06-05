@@ -1,0 +1,5 @@
+[
+    {"name": "Aloe Vera", "description": "A succulent plant known for its medicinal properties.", "price": 120},
+    {"name": "Echeveria", "description": "A popular succulent with rosette-shaped leaves.", "price": 100},
+    {"name": "Jade Plant", "description": "A succulent with thick, shiny leaves that are often used in bonsai.", "price": 140}
+]
