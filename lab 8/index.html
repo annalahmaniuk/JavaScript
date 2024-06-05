@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+ 
+  <title>Photography Portfolio</title>
+</head>
+<body>
+  <nav id="navbar" class="navbar">
+    <div class="navbar-items">
+      <a href="#">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button id="hamburgerBtn" class="hamburger">&#9776;</button>
+  </nav>
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to My Photography Portfolio</h1>
+      <p>Capturing moments from today... Creating memories for a lifetime.</p>
+    </div>
+  </header>
+
+  <section id="gallery" class="carousel">
+    <div class="slides">
+      <div class="slide"><img src="https://via.placeholder.com/800x400" alt="Photo 1"></div>
+      <div class="slide"><img src="https://via.placeholder.com/800x400" alt="Photo 2"></div>
+      <div class="slide"><img src="https://via.placeholder.com/800x400" alt="Photo 3"></div>
+      <div class="slide"><img src="https://via.placeholder.com/800x400" alt="Photo 4"></div>
+      <div class="slide"><img src="https://via.placeholder.com/800x400" alt="Photo 5"></div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="indicators">
+      <div class="indicator" data-slide="0"></div>
+      <div class="indicator" data-slide="1"></div>
+      <div class="indicator" data-slide="2"></div>
+      <div class="indicator" data-slide="3"></div>
+      <div class="indicator" data-slide="4"></div>
+    </div>
+  </section>
+
+  <section class="large-images">
+    <img src="https://via.placeholder.com/800x400" alt="Large Image 1">
+    <img src="https://via.placeholder.com/800x400" alt="Large Image 2">
+    <img src="https://via.placeholder.com/800x400" alt="Large Image 3">
+  </section>
+
+  <section class="medium-images">
+    <img src="https://via.placeholder.com/600x300" alt="Medium Image 1">
+    <img src="https://via.placeholder.com/600x300" alt="Medium Image 2">
+    <img src="https://via.placeholder.com/600x300" alt="Medium Image 3">
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>Hi, I'm Anna, a passionate photographer with a love for capturing the beauty of the world through my lens. With over 10 years of experience, I specialize in portrait, landscape, and event photography.</p>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>If you'd like to work with me or just say hello, feel free to reach out!</p>
+    <form action="/submit-form" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-items">
+      <a href="#">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>&copy; Anna Photography 2024</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
